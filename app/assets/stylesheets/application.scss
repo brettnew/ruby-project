@@ -1,0 +1,10 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.user-div {
+  padding: 50px;
+  img {
+    height: 80%;
+    width: 300px;
+  }
+}

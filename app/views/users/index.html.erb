@@ -1,0 +1,12 @@
+<h1>Welcome to Language Learning, the site that connects you with native speakers.</h1>
+<h3>Don't have an account? Sign up <span><%= link_to 'here', new_user_path %></span></h3>
+<h3>Here are some of our featured users:</h3>
+<ul>
+  <% @users.each do |user| %>
+  <div class="col-xs-4 user-div">
+    <%= image_tag user.photo %>
+    <h3><%= link_to user.first_name, user_path(user) %></h3>
+  </div>
+  <% end %>
+</ul>
+<br>
