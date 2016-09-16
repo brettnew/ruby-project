@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
-  root :to => 'users#index'
-  
+  devise_for :users, path_names: {sign_in: "login", sign_out: "logout"}
+
   resources :users
 
   resources :languages
+
+  root :to => 'users#index'
 end
