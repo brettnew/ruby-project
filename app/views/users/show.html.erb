@@ -1,6 +1,8 @@
-<%= image_tag @user.photo %>
-<h2><%= @user.first_name%> <%= @user.last_name%></h2>
-<h5><%= @user.bio %></h5>
+<div class="profile_picture">
+  <%= image_tag current_user.avatar %>
+</div>
+<h2><%= current_user.first_name%> <%= current_user.last_name%></h2>
+<h5><%= current_user.bio %></h5>
 
 
 <p><%= link_to 'Edit Profile', edit_user_path(@user) %></p>

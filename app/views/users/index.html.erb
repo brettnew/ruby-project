@@ -4,7 +4,7 @@
 <ul>
   <% @users.each do |user| %>
   <div class="col-xs-4 user-div">
-    <%= image_tag user.photo %>
+    <%= image_tag user.avatar %>
     <h3><%= link_to user.first_name, user_path(user) %></h3>
   </div>
   <% end %>
