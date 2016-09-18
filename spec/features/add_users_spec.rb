@@ -7,12 +7,12 @@ describe 'the add a user process' do
     fill_in 'First name', :with => 'Bob'
     fill_in 'Last name', :with => 'Jones'
     fill_in 'Zipcode', :with => '12345'
-    fill_in 'Bio', :with => 'I like stuff'
     choose('user_gender_male')
+    fill_in 'Bio', :with => 'I like stuff'
     fill_in 'Email', :with => 'bob@email.com'
-    attach_file ('user_avatar'), 'app/assets/images/profile-picture.jpg'
     fill_in 'Password', :with => 'password'
     fill_in 'Password confirmation', :with => 'password'
+    page.attach_file('profile_picture', 'app/assets/images/profile-picture.jpg')
     click_button 'Create Account'
     expect(page).to have_content 'Bob'
   end
